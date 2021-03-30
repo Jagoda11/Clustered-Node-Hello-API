@@ -31,7 +31,6 @@ if (cluster.isMaster) {
     cluster.fork();
   }
 } else {
+  //if not on master thread
   http.createServer(serverHand).listen(3001);
-  //if not on master thread,add something here
-  // add something here
 }
